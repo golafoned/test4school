@@ -21,14 +21,9 @@ time, mark, audio, video {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap');
 /*..............................................................................*/
-body {
-	min-height: 10000px;
-}
 .container {
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
-	display: flex;
-
 }
 
 .hamburger-menu{
@@ -86,9 +81,11 @@ body {
 
 #footer {
 	width: 100%;
+	bottom: 0;
 	height: 10vw;
-	display: flex;
-	align-items: flex-end;
+	display: absolute;
+	align-items: flex-end ;
+	position: relative;
 	background-color: #333;
 	color: #999;
 	font-family: 'Montserrat', sans-serif;

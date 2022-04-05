@@ -107,6 +107,21 @@ time, mark, audio, video {
 	z-index: 1;
 }
 
+
+#footer {
+	width: 100%;
+	bottom: 0;
+	height: 10vw;
+	display: flex;
+	align-items: flex-end ;
+	position: relative;
+	background-color: #333;
+	color: #999;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.9vw;
+	font-weight: 200;
+}
+
 @media screen and (max-width:800px) {
 	#ul_nav {
 		display: none;

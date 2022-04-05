@@ -1,0 +1,216 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap');
+/*..............................................................................*/
+body {
+	min-height: 10000px;
+}
+.container {
+	width: 100%;
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+
+}
+
+.hamburger-menu{
+	display: none;
+}
+#header {
+	box-sizing: border-box;
+	padding-left: 10%;
+	width: 100%;
+	display: inline-flex;
+	text-align: center;
+	background-color: rgb(72, 139, 244);
+	position: sticky; 
+	top: 0; 
+	z-index: 2;
+}
+#a1 {
+	width: 12vw;
+}
+#logo {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+
+#ul_nav {
+    line-height: normal;
+    display: inline-block;
+    vertical-align: middle;
+	width: 100%;
+	margin: auto;
+}
+#ul_nav > li {
+	display: inline-block;
+	padding-left: 10%;
+	text-decoration: none;
+	padding-left: 60px;
+	color: white;
+	font-size: 1.3vw;
+	font-weight: 400;
+}
+
+.nav_a {
+	text-decoration: none;
+	color: white;
+}
+
+.nav_a:hover {
+	border-bottom: 0.17vw solid #fff;
+}
+
+.nav_a:visited {
+	color: white;
+}
+
+#footer {
+	width: 100%;
+	height: 10vw;
+	display: flex;
+	align-items: flex-end;
+	background-color: #333;
+	color: #999;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.9vw;
+	font-weight: 200;
+}
+
+#footer > p{
+	display: inline-block;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 1%;
+}
+
+#princess {
+	width: 30%;
+	right: 0;
+	position: absolute;
+	z-index: 1;
+}
+
+@media screen and (max-width:800px) {
+	#ul_nav {
+		display: none;
+	}
+	.hamburger-menu{
+		display: inline-block;
+		margin-right: 0px;
+	}
+	#menu__toggle {
+		opacity: 0;
+	  }
+	  
+	  #menu__toggle:checked ~ .menu__btn > span {
+		transform: rotate(45deg);
+	  }
+	  #menu__toggle:checked ~ .menu__btn > span::before {
+		top: 0;
+		transform: rotate(0);
+	  }
+	  #menu__toggle:checked ~ .menu__btn > span::after {
+		top: 0;
+		transform: rotate(90deg);
+	  }
+	  #menu__toggle:checked ~ .menu__box {
+		visibility: visible;
+		right: 0;
+	  }
+	  
+	  .menu__btn {
+		display: flex;
+		align-items: center;
+		position: fixed;
+		top: 2.3vw;
+		right: 1.7vw;
+	  
+		width: 3.5%;
+		height: 2vw;
+	  
+		cursor: pointer;
+		z-index: 10;
+	  }
+	  
+	  .menu__btn > span,
+	  .menu__btn > span::before,
+	  .menu__btn > span::after {
+		display: block;
+		position: absolute;
+	  
+		width: 100%;
+		height: 0.3vw;
+	  
+		background-color: #fff;
+	  
+		transition-duration: .25s;
+	  }
+	  .menu__btn > span::before {
+		content: '';
+		top: -1.3vw;
+	  }
+	  .menu__btn > span::after {
+		content: '';
+		top: 1.2vw;
+	  }
+	  
+	  .menu__box {
+		z-index: 5;
+		display: block;
+		position: fixed;
+		visibility: hidden;
+		top: 0;
+		right: -100%;
+	  
+		width: 60%;
+		height: 100%;
+	  
+		margin: 0;
+		padding: 80px 0;
+	  
+		list-style: none;
+	  
+		background-color: #ECEFF1;
+		box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+	  
+		transition-duration: .25s;
+	  }
+	  
+	  .menu__item {
+		display: block;
+		padding: 2vw 4vw;
+	  
+		color: rgb(72, 139, 244);
+	  
+		font-family: 'Roboto', sans-serif;
+		font-size: 3vw;
+		font-weight: 600;
+	  
+		text-decoration: none;
+	  
+		transition-duration: .25s;
+	  }
+	  .menu__item:hover {
+		background-color: #CFD8DC;
+	  }
+}
